@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="LIBRARY.API/LIBRARY.API.csproj" />
+  <Project Path="LIBRARY.Application/LIBRARY.Application.csproj" Id="5a97d6a5-5367-4462-9e2b-3ab177580c07" />
+  <Project Path="LIBRARY.Domain/LIBRARY.Domain.csproj" Id="3374cfab-874a-41f1-9bd2-474ba1630b65" />
+  <Project Path="LIBRARY.Infrastructure/LIBRARY.Infrastructure.csproj" Id="9ec23aa7-6578-46d7-964f-de12f034312d" />
+</Solution>
