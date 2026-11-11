@@ -6,7 +6,7 @@ namespace LIBRARY.Domain.Enums
 {
     
 
-    enum MembershipTypeEnum
+    public enum MembershipType
     {
         Standard = 1,
         Student = 2,

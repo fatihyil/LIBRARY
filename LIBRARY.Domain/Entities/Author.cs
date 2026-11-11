@@ -8,18 +8,23 @@ namespace LIBRARY.Domain.Entities
 {
     public  class Author :BaseEntity
     {
+        public string FirstName { get; private set; } = null!;
+        public string LastName { get; private set; } = null!;
+
+        private readonly List<Book> _books = new List<Book>();
+        public IReadOnlyCollection<Book> Books => _books.AsReadOnly();
         private Author()
         {
 
         }
         public Author(string firstName, string lastName)
         {
-            if (string.IsNullOrEmpty(firstName))
+            if (string.IsNullOrWhiteSpace(firstName.Trim()))
             {
                 throw new DomainException("Author name is required");
             }
 
-            if (string.IsNullOrEmpty(lastName))
+            if (string.IsNullOrWhiteSpace(lastName.Trim()))
             {
                 throw new DomainException("Author lastname is required");
             }
@@ -27,7 +32,6 @@ namespace LIBRARY.Domain.Entities
             FirstName = firstName;
             LastName = lastName;
         }
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
+      
     }
 }
